@@ -4,16 +4,17 @@ namespace Course
     class Produto
     {
         private string _nome;
-        private double _preco;
-        private int _quantidade;
+        public double preco { get; private set; }
+        public int Quantidade { get; private set; }
 
+        //prop tab tab (gera estrutura)
         //Serei obrigado a informar nome, preço e quantidade
         //na hora de instânciar o produto!
         public Produto(string nome, double preco, int quantidade)
         {
             _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
+            Preco = preco;
+            Quantidade = quantidade;
         }
 
         public Produto()
@@ -40,11 +41,6 @@ namespace Course
         public double Preco
         {
             get { return _preco; }
-        }
-
-        public int Quantidade
-        {
-            get { return _quantidade; }
         }
 
         public double ValorTotalEmEstoque()
